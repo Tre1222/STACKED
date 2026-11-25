@@ -1,20 +1,18 @@
 import turtle as trtl
 
-class Card:
-    def __init__(
-            self,
-            card_image,
-            card_type,
-            card_value,
-            life_span):
-        # Instance attributes (unique to each card)
-        self.cardImage = card_image
-        self.cardValue = card_value   # 1-9 normal cards, -5 to 0 special cards
-        self.lifeSpan = life_span     # How many turns this card can exist
-        self.turtle = trtl.Turtle()   # Gives each card its own turtle to draw itself
+def draw_card(name,value, life_span, card_image, x,y):
+    card_turtle = trtl.Turtle()
+    card_turtle.speed(0)
+    card_turtle.hideturtle()
+    card_turtle.shape(card_image)
+    card_turtle.penup()
+    card_turtle.goto(x, y)
+    card_turtle.showturtle()
+    return {
+        "name": name,
+        "value": value,
+        "life_span": life_span,
+        "card_image": card_image,
+        "turtle": card_turtle
+    }
 
-    def onDrawCard(self, x, y):
-        pass
-
-    def onPlaceCard(self):
-        pass
