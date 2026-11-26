@@ -9,9 +9,9 @@ def cardToHand(card):
         
         data.p1Hand.append(card)
         if len(data.p1Hand) % 2 == 0:
-            card[3].goto(-10 * len(data.p1Hand), 200)
+            card[3].goto(-10 * len(data.p1Hand), -200)
         else:
-            card[3].goto(10 * len(data.p1Hand), 200)
+            card[3].goto(10 * len(data.p1Hand), -200)
     
     elif data.currentPlayer == 2:
         

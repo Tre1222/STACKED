@@ -52,49 +52,16 @@ def changeTurn(x,y):
   else:
     data.currentPlayer = 1
 
-def drawCard():
+def drawCard(x,y):
     cardName = rnd.choice(data.cardNames)
     cardToDraw = card.createCard(cardName)
     card.cardToHand(cardToDraw)
 
-
-def drawCardStack():
-  pass
 # event handlers
+
 endTurntle.onclick(changeTurn)
-#temporary CHANGE LATER CHANGE LATER
-wn.onkeypress(drawCard, "d")
+sceneTurtle.onclick(drawCard)
 wn.listen()
-
-# cardNames = ["thief", "rocket", "jack", "gambler"]
-# cardValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-
-# possibleNames = ["thief", "rocket", "jack", "gambler"]
-
-
-# player1Hand = []
-# player2Hand = []
-
-# turn = False
-
-# while True:
-    
-
-    
-#     if turn == False:
-#         player1Hand.append(card)
-#     else:
-#         player2Hand.append(card)
-#     turn = not turn
-#     sleep(1)
-#     print(f"Player 1 Hand: {player1Hand}")
-#     print(f"Player 2 Hand: {player2Hand}")
-    
-
-
-
-
 
 
 wn.mainloop()
