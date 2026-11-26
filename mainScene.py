@@ -36,9 +36,25 @@ endTurntle.shape(data.endTurn)
 endTurntle.penup()
 endTurntle.goto(600, 0)
 
+player1StackTurtle = trtl.Turtle()
+player1StackTurtle.speed(0)
+player1StackTurtle.penup()
+player1StackTurtle.goto(-200, -10)
+
+player2StackTurtle = trtl.Turtle()
+player2StackTurtle.speed(0)
+player2StackTurtle.penup()
+player2StackTurtle.goto(200, -10)
+
 # create black screen loading turtle
 
 # create necassaary functions
+def updateStack():
+    player1StackTurtle.clear()
+    player2StackTurtle.clear()
+    player1StackTurtle.write(f"Player 1 Stack: {data.p1Stack}", font=("Arial", 16, "normal"))
+    player2StackTurtle.write(f"Player 2 Stack: {data.p2Stack}", font=("Arial", 16, "normal"))
+
 
 def changeTurn(x,y):
   if data.playerTurn == 1:
@@ -66,11 +82,11 @@ endTurntle.onclick(changeTurn)
 wn.onkeypress(drawCard, "d")
 wn.listen()
 
-# cardNames = ["thief", "rocket", "jack", "gambler"]
+# cardNames = ["thief", "rocket", "rabbit", "gambler"]
 # cardValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
-# possibleNames = ["thief", "rocket", "jack", "gambler"]
+# possibleNames = ["thief", "rocket", "rabbit", "gambler"]
 
 
 # player1Hand = []

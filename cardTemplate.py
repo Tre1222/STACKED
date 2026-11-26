@@ -55,7 +55,7 @@ def playCard(card, x, y):
         pass
     elif card[0] == "rocket":
         pass
-    elif card[0] == "jack":
+    elif card[0] == "rabbit":
         pass
     elif card[0] == "gambler":
         pass
