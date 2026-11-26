@@ -1,3 +1,6 @@
+import cardTemplate
+import turtle as trtl
+
 # ------------- background images -------------
 
 bgPlay1 = "play1Bg.gif"
@@ -13,6 +16,12 @@ turnCounter = 0
 
 p1Hand = []
 p2Hand = []
+p1Stack = 0
+p2Stack = 0
+
+#1 is player 1, 2 is player 2
+currentPlayer = 1
+
 
 currentCard = ""
 previousCard = ""
@@ -88,5 +97,20 @@ def getCardStats(name):
 
 
 
-
+def cardAbility(card):
+    if card[0] == "king":
+       if currentPlayer == 1:
+           drawnCard = 0
+           return "Draw a card"
+       else:
+           drawnCard = 0
+           return "Draw a card"
+    elif card[0] == "queen":
+        return "Steal a card from opponent"
+    elif card[0] == "jack":
+        return "Skip opponent's turn"
+    elif card[0] == "ace":
+        return "Play any card"
+    else:
+        return "No special ability"
 

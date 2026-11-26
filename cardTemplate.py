@@ -15,7 +15,8 @@ def cardToHand(card):
         else:
             card[3].goto(10 * len(data.p2Hand), -200)
 
-
+def cardToStack(card):
+    card[3].goto(data.cardStackPosition)
 def createCard(name):
     card_stats = data.getCardStats(name)
     value = card_stats[0]
@@ -31,7 +32,7 @@ def createCard(name):
 
 
 
-    return [value, life_span, card_image]
+    return [value, life_span, card_image, card]
 
 
 
