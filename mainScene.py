@@ -66,11 +66,11 @@ endTurntle.onclick(changeTurn)
 wn.onkeypress(drawCard, "d")
 wn.listen()
 
-# cardNames = ["king", "queen", "jack", "ace"]
+# cardNames = ["thief", "rocket", "jack", "gambler"]
 # cardValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
-# possibleNames = ["king", "queen", "jack", "ace"]
+# possibleNames = ["thief", "rocket", "jack", "gambler"]
 
 
 # player1Hand = []
