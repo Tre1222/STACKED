@@ -19,6 +19,14 @@ wn.setup(width=0.85, height=1.0)
 wn.addshape(data.bgPlay1)
 wn.addshape(data.bgPlay2)
 wn.addshape(data.endTurn)
+wn.addshape("cardBack.gif")
+wn.addshape("cardVal1.gif")
+wn.addshape("cardVal2.gif")
+wn.addshape("cardVal3.gif")
+wn.addshape("cardVal4.gif")
+wn.addshape("cardVal5.gif")
+wn.addshape("cardVal6.gif")
+wn.addshape("cardVal7.gif")
 
 # create scene maker turtle
 
