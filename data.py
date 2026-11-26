@@ -3,8 +3,6 @@ import random
 import cardTemplate as card
 import turtle as trtl
 
-from mainScene import updateStack
-
 # ------------- background images -------------
 
 bgPlay1 = "play1Bg.gif"
@@ -44,65 +42,67 @@ def getCardStats(name):
     if name == "thief":
         value = 13
         life_span = 10
-        card_image = "thief.png"
+        card_image = "cardBack.gif"
     elif name == "rocket":
         value = 12
         life_span = 9
-        card_image = "rocket.png"
+        card_image = "cardBack.gif"
     elif name == "rabbit":
         value = 11
         life_span = 8
-        card_image = "rabbit.png"
+        card_image = "cardBack.gif"
     elif name == "gambler":
         value = 1
         life_span = 7
-        card_image = "gambler.png"
+        card_image = "cardBack.gif"
     elif name == "val1":
         value = 2
         life_span = 6
-        card_image = "val1.png"
+        card_image = "cardVal1.gif"
     elif name == "val2":
         value = 3
         life_span = 5
-        card_image = "val2.png"
+        card_image = "cardVal2.gif"
     elif name == "val3":
         value = 4
         life_span = 4
-        card_image = "val3.png"
+        card_image = "cardVal3.gif"
     elif name == "val4":
         value = 5
         life_span = 3
-        card_image = "val4.png"
+        card_image = "cardVal4.gif"
     elif name == "val5":
         value = 6
         life_span = 2
-        card_image = "val5.png"
+        card_image = "cardVal5.gif"
     elif name == "val6":
         value = 7
         life_span = 1
-        card_image = "val6.png"
+        card_image = "cardVal6.gif"
     elif name == "val7":
         value = 8
         life_span = 0
-        card_image = "val7.png"
+        card_image = "cardVal7.gif"
     elif name == "val8":
         value = 9
         life_span = -1
-        card_image = "val8.png"
+        card_image = "cardBack.gif"
     elif name == "val9":
         value = 10
         life_span = -2
-        card_image = "val9.png"
+        card_image = "cardBack.gif"
     elif name == "val10":
         value = 11
         life_span = -3
-        card_image = "val10.png"
+        card_image = "cardBack.gif"
 
     return [value, life_span, card_image]
 
 
 
 def cardAbility(card):
+    from mainScene import updateStack
+
     if card[0] == "thief":
        if currentPlayer == 1:
            randomCard = random.choice(cardNames)
