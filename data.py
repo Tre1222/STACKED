@@ -1,7 +1,15 @@
-import turtle as trtl
+# ------------- background images -------------
+
+bgPlay1 = "play1Bg.gif"
+bgPlay2 = "play2Bg.gif"
+endTurn = "endTurn.png"
+
+# ------------- turn info -------------
 
 #1 is player 1, 2 is player 2
-currentTurn = 1
+playerTurn = 1
+
+turnCounter = 0
 
 p1Hand = []
 p2Hand = []
@@ -12,6 +20,7 @@ previousCard = ""
 
 cardStackPosition = (-200, -10)
 
+# ------------ card stats ------------
 
 def getCardStats(name):
     value = 0
