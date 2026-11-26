@@ -5,7 +5,15 @@ import data
 
 
 def cardToHand(card):
-    pass
+    if data.currentTurn == 1:
+        data.p1Hand.append(card)
+        card[3].goto(data.p1Hand[-1].pos())
+    else:
+        data.p2Hand.append(card)
+        if len(data.p2Hand) % 2 == 0:
+            card[3].goto(-10 * len(data.p2Hand), -200)
+        else:
+            card[3].goto(10 * len(data.p2Hand), -200)
 
 
 def createCard(name):
