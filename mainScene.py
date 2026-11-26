@@ -2,7 +2,13 @@ import turtle as trtl
 
 
 import data
+import cardTemplate as card
 import random as rnd
+
+# variables
+
+
+
 
 # prepare screen
 
@@ -10,7 +16,6 @@ wn = trtl.Screen()
 wn.setup(width=0.85, height=1.0)
 
 # prepare custom images
-
 wn.addshape(data.bgPlay1)
 wn.addshape(data.bgPlay2)
 wn.addshape(data.endTurn)
@@ -42,11 +47,21 @@ def changeTurn(x,y):
   else:
     data.playerTurn = 1
     sceneTurtle.shape(data.bgPlay1)
+  if data.currentPlayer == 1:
+    data.currentPlayer = 2
+  else:
+    data.currentPlayer = 1
+
+def drawCard():
+    cardName = rnd.choice(data.cardNames)
+    cardToDraw = card.createCard(cardName)
+    card.cardToHand(cardToDraw)
+
 
 # event handlers
-
 endTurntle.onclick(changeTurn)
-
+#temporary CHANGE LATER CHANGE LATER
+wn.onkeypress(drawCard, "d")
 wn.listen()
 
 # cardNames = ["king", "queen", "jack", "ace"]

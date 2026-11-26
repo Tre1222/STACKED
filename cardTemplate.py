@@ -5,18 +5,28 @@ import data
 
 
 def cardToHand(card):
-    if data.currentTurn == 1:
+    if data.currentPlayer == 1:
+        
         data.p1Hand.append(card)
-        card[3].goto(data.p1Hand[-1].pos())
-    else:
+        if len(data.p1Hand) % 2 == 0:
+            card[3].goto(-10 * len(data.p1Hand), 200)
+        else:
+            card[3].goto(10 * len(data.p1Hand), 200)
+    
+    elif data.currentPlayer == 2:
+        
         data.p2Hand.append(card)
         if len(data.p2Hand) % 2 == 0:
             card[3].goto(-10 * len(data.p2Hand), -200)
         else:
             card[3].goto(10 * len(data.p2Hand), -200)
+    
+
+
 
 def cardToStack(card):
     card[3].goto(data.cardStackPosition)
+
 def createCard(name):
     card_stats = data.getCardStats(name)
     value = card_stats[0]
