@@ -58,6 +58,8 @@ def drawCard():
     card.cardToHand(cardToDraw)
 
 
+def drawCardStack():
+  pass
 # event handlers
 endTurntle.onclick(changeTurn)
 #temporary CHANGE LATER CHANGE LATER
