@@ -1,5 +1,14 @@
 import turtle as trtl
 
+#1 is player 1, 2 is player 2
+currentTurn = 1
+
+p1Hand = []
+p2Hand = []
+
+currentCard = ""
+previousCard = ""
+
 
 cardStackPosition = (-200, -10)
 
