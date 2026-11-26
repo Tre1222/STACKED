@@ -5,13 +5,7 @@ import turtle as trtl
 
 bgPlay1 = "play1Bg.gif"
 bgPlay2 = "play2Bg.gif"
-<<<<<<< Updated upstream
-endTurn = "endTurn.png"
-# ------------- card images -------------
-=======
 endTurn = "endTurn.gif"
->>>>>>> Stashed changes
-
 # ------------- card names -------------
 cardNames = ["thief", "rocket", "jack", "gambler", "val1", "val2", "val3", "val4", "val5", "val6", "val7", "val8", "val9", "val10"]
 # ------------- turn info -------------
