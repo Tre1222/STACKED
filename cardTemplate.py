@@ -51,11 +51,11 @@ def createCard(name):
 
 def playCard(card, x, y):
 
-    if card[0] == "king":
+    if card[0] == "thief":
         pass
-    elif card[0] == "queen":
+    elif card[0] == "rocket":
         pass
     elif card[0] == "jack":
         pass
-    elif card[0] == "ace":
+    elif card[0] == "gambler":
         pass

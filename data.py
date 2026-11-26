@@ -9,7 +9,7 @@ endTurn = "endTurn.png"
 # ------------- card images -------------
 
 # ------------- card names -------------
-cardNames = ["king", "queen", "jack", "ace", "val1", "val2", "val3", "val4", "val5", "val6", "val7", "val8", "val9", "val10"]
+cardNames = ["thief", "rocket", "jack", "gambler", "val1", "val2", "val3", "val4", "val5", "val6", "val7", "val8", "val9", "val10"]
 # ------------- turn info -------------
 
 #1 is player 1, 2 is player 2
@@ -39,22 +39,22 @@ def getCardStats(name):
     life_span = 0
     card_image = ""
 
-    if name == "king":
+    if name == "thief":
         value = 13
         life_span = 10
-        card_image = "king.png"
-    elif name == "queen":
+        card_image = "thief.png"
+    elif name == "rocket":
         value = 12
         life_span = 9
-        card_image = "queen.png"
+        card_image = "rocket.png"
     elif name == "jack":
         value = 11
         life_span = 8
         card_image = "jack.png"
-    elif name == "ace":
+    elif name == "gambler":
         value = 1
         life_span = 7
-        card_image = "ace.png"
+        card_image = "gambler.png"
     elif name == "val1":
         value = 2
         life_span = 6
@@ -101,18 +101,18 @@ def getCardStats(name):
 
 
 def cardAbility(card):
-    if card[0] == "king":
+    if card[0] == "thief":
        if currentPlayer == 1:
            drawnCard = 0
            return "Draw a card"
        else:
            drawnCard = 0
            return "Draw a card"
-    elif card[0] == "queen":
+    elif card[0] == "rocket":
         return "Steal a card from opponent"
     elif card[0] == "jack":
         return "Skip opponent's turn"
-    elif card[0] == "ace":
+    elif card[0] == "gambler":
         return "Play any card"
     else:
         return "No special ability"
