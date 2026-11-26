@@ -36,9 +36,25 @@ endTurntle.shape(data.endTurn)
 endTurntle.penup()
 endTurntle.goto(600, 0)
 
+player1StackTurtle = trtl.Turtle()
+player1StackTurtle.speed(0)
+player1StackTurtle.penup()
+player1StackTurtle.goto(-200, -10)
+
+player2StackTurtle = trtl.Turtle()
+player2StackTurtle.speed(0)
+player2StackTurtle.penup()
+player2StackTurtle.goto(200, -10)
+
 # create black screen loading turtle
 
 # create necassaary functions
+def updateStack():
+    player1StackTurtle.clear()
+    player2StackTurtle.clear()
+    player1StackTurtle.write(f"Player 1 Stack: {data.p1Stack}", font=("Arial", 16, "normal"))
+    player2StackTurtle.write(f"Player 2 Stack: {data.p2Stack}", font=("Arial", 16, "normal"))
+
 
 def changeTurn(x,y):
   if data.playerTurn == 1:

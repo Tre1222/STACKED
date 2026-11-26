@@ -1,5 +1,9 @@
-import cardTemplate
+import random
+
+import cardTemplate as card
 import turtle as trtl
+
+from mainScene import updateStack
 
 # ------------- background images -------------
 
@@ -7,7 +11,7 @@ bgPlay1 = "play1Bg.gif"
 bgPlay2 = "play2Bg.gif"
 endTurn = "endTurn.gif"
 # ------------- card names -------------
-cardNames = ["thief", "rocket", "jack", "gambler", "val1", "val2", "val3", "val4", "val5", "val6", "val7", "val8", "val9", "val10"]
+cardNames = ["thief", "rocket", "rabbit", "gambler", "val1", "val2", "val3", "val4", "val5", "val6", "val7", "val8", "val9", "val10"]
 # ------------- turn info -------------
 
 #1 is player 1, 2 is player 2
@@ -45,10 +49,10 @@ def getCardStats(name):
         value = 12
         life_span = 9
         card_image = "rocket.png"
-    elif name == "jack":
+    elif name == "rabbit":
         value = 11
         life_span = 8
-        card_image = "jack.png"
+        card_image = "rabbit.png"
     elif name == "gambler":
         value = 1
         life_span = 7
@@ -101,17 +105,29 @@ def getCardStats(name):
 def cardAbility(card):
     if card[0] == "thief":
        if currentPlayer == 1:
-           drawnCard = 0
-           return "Draw a card"
+           randomCard = random.choice(cardNames)
+           cardToDraw = card.createCard(randomCard)
+           p1Hand.append(cardToDraw)
+           card.cardToHand(cardToDraw)
+           p1Stack += 3
        else:
-           drawnCard = 0
-           return "Draw a card"
+           randomCard = random.choice(cardNames)
+           cardToDraw = card.createCard(randomCard)
+           p2Hand.append(cardToDraw)
+           card.cardToHand(cardToDraw)
+           p2Stack += 3
     elif card[0] == "rocket":
-        return "Steal a card from opponent"
-    elif card[0] == "jack":
-        return "Skip opponent's turn"
+        if currentPlayer == 1:
+            p2Stack -= 3
+        else:
+            p1Stack -= 3
+    elif card[0] == "rabbit":
+        if currentPlayer == 1:
+            p1Stack += 3
+        else:
+            p2Stack += 3
     elif card[0] == "gambler":
-        return "Play any card"
+        pass
     else:
-        return "No special ability"
-
+        pass
+    updateStack()
