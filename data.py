@@ -11,7 +11,7 @@ endTurn = "endTurn.gif"
 # ------------- card names -------------
 cardNames = ["thief", "rocket", "rabbit", "gambler", "val1", "val2", "val3", "val4", "val5", "val6", "val7", "val8", "val9", "val10"]
 # ------------- turn info -------------
-
+turnTaken = False
 #1 is player 1, 2 is player 2
 playerTurn = 1
 
