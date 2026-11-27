@@ -63,6 +63,7 @@ def updateStack():
     player1StackTurtle.write(f"Player 1 Stack: {data.p1Stack}", font=("Arial", 16, "normal"))
     player2StackTurtle.write(f"Player 2 Stack: {data.p2Stack}", font=("Arial", 16, "normal"))
 
+
 def changeTurn(x,y):
   if data.playerTurn == 1:
     data.playerTurn = 2
@@ -70,37 +71,14 @@ def changeTurn(x,y):
   else:
     data.playerTurn = 1
     sceneTurtle.shape(data.bgPlay1)
-  
   if data.currentPlayer == 1:
     data.currentPlayer = 2
   else:
     data.currentPlayer = 1
 
-
-  if data.currentPlayer == 1:
-     for card in data.p1Hand:
-        card[3].hideturtle()
-     for card in data.p2Hand:
-        card[3].showturtle()
-  else:
-     for card in data.p2Hand:
-        card[3].showturtle()
-     for card in data.p1Hand:
-        card[3].hideturtle()
-  data.turnTaken = False
-    
-
-
-  
-
-
 def drawCard(x,y):
-    if data.turnTaken:
-        return
-    
     cardName = rnd.choice(data.cardNames)
     cardToDraw = card.createCard(cardName)
-    data.turnTaken = True
     card.cardToHand(cardToDraw)
 
 # event handlers
