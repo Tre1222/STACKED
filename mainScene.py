@@ -29,7 +29,7 @@ wn.addshape("cardVal7NoBg.gif")
 wn.addshape("cardVal8NoBg.gif")
 wn.addshape("cardVal9NoBg.gif")
 wn.addshape("cardVal10NoBg.gif")
-
+wn.addshape("cardTheif.gif")
 # create scene maker turtle
 
 sceneTurtle = trtl.Turtle()
@@ -75,10 +75,26 @@ def changeTurn(x,y):
     sceneTurtle.shape(data.bgPlay1)
   if data.currentPlayer == 1:
     data.currentPlayer = 2
-  else:
+  elif data.currentPlayer == 2:
     data.currentPlayer = 1
 
+  if data.currentPlayer == 1:
+     for card in data.p2Hand:
+        card[3].hideturtle()
+     for card in data.p1Hand:
+        card[3].showturtle()
+  elif data.currentPlayer == 2:
+     for card in data.p2Hand:
+        card[3].showturtle()
+     for card in data.p1Hand:
+        card[3].hideturtle()
+  
+  data.turnTaken = False
+  
 def drawCard(x,y):
+    if data.turnTaken:
+        return
+    data.turnTaken = True
     cardName = rnd.choice(data.cardNames)
     cardToDraw = card.createCard(cardName)
     card.cardToHand(cardToDraw)

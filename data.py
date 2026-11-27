@@ -11,7 +11,7 @@ endTurn = "endTurn.gif"
 # ------------- card names -------------
 cardNames = ["thief", "rocket", "rabbit", "gambler", "val1", "val2", "val3", "val4", "val5", "val6", "val7", "val8", "val9", "val10"]
 # ------------- turn info -------------
-
+turnTaken = False
 #1 is player 1, 2 is player 2
 playerTurn = 1
 
@@ -42,7 +42,7 @@ def getCardStats(name):
     if name == "thief":
         value = 13
         life_span = 10
-        card_image = "cardBack.gif"
+        card_image = "cardTheif.gif"
     elif name == "rocket":
         value = 12
         life_span = 9
