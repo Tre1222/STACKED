@@ -58,43 +58,43 @@ def getCardStats(name):
     elif name == "val1":
         value = 2
         life_span = 6
-        card_image = "cardVal1.gif"
+        card_image = "cardVal1NoBg.gif"
     elif name == "val2":
         value = 3
         life_span = 5
-        card_image = "cardVal2.gif"
+        card_image = "cardVal2NoBg.gif"
     elif name == "val3":
         value = 4
         life_span = 4
-        card_image = "cardVal3.gif"
+        card_image = "cardVal3NoBg.gif"
     elif name == "val4":
         value = 5
         life_span = 3
-        card_image = "cardVal4.gif"
+        card_image = "cardVal4NoBg.gif"
     elif name == "val5":
         value = 6
         life_span = 2
-        card_image = "cardVal5.gif"
+        card_image = "cardVal5NoBg.gif"
     elif name == "val6":
         value = 7
         life_span = 1
-        card_image = "cardVal6.gif"
+        card_image = "cardVal6NoBg.gif"
     elif name == "val7":
         value = 8
         life_span = 0
-        card_image = "cardVal7.gif"
+        card_image = "cardVal7NoBg.gif"
     elif name == "val8":
         value = 9
         life_span = -1
-        card_image = "cardBack.gif"
+        card_image = "cardVal8NoBg.gif"
     elif name == "val9":
         value = 10
         life_span = -2
-        card_image = "cardBack.gif"
+        card_image = "cardVal9NoBg.gif"
     elif name == "val10":
         value = 11
         life_span = -3
-        card_image = "cardBack.gif"
+        card_image = "cardVal10NoBg.gif"
 
     return [value, life_span, card_image]
 
